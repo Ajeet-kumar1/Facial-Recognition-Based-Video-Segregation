@@ -6,6 +6,7 @@ import tempfile
 import pandas as pd
 from tqdm import tqdm
 from deepface import DeepFace
+from utils import create_folder
 from config import matched_dir, unmatched_dir, log_file
 from config import frame_interval_sec, model_name, detector_backend, align, threshold
 
@@ -113,7 +114,10 @@ def driver_code(video_dir, reference_image):
 # Boiler plate code.
 if __name__=='__main__':
     # Take the reference image path
+    matched_dir = "matched"
+    unmatched_dir = "unmatched"
     reference_image = input("Enter the reference image path: ")
     video_dir = input("Enter the videos directory: ")
+    create_folder(matched_dir, unmatched_dir)
     driver_code(video_dir, reference_image)
 
