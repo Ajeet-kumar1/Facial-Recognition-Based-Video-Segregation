@@ -11,5 +11,23 @@ The task is to:
 image. 
 3. Classify the videos into two categories: 
 ○ Videos that contain the reference face. 
-○ Videos that do not contain the reference face. 
+○ Videos that do not contain the reference face.
+
+To install and run this use the following commands
+
+```
+git clone https://github.com/Ajeet-kumar1/Facial-Recognition-Based-Video-Segregation.git
+cd Facial-Recognition-Based-Video-Segregation
+```
+
+```
+conda create --name facerecog python==3.10
+conda activate facerecog
+pip install -r requirements.txt
+```
+
+After this run 
+```
+python main.py
+```
 
